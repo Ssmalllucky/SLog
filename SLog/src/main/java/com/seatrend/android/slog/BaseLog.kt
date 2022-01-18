@@ -1,12 +1,12 @@
 package com.seatrend.android.slog
 
 import android.util.Log
-import com.seatrend.android.slog.SLog.Companion.A
-import com.seatrend.android.slog.SLog.Companion.D
-import com.seatrend.android.slog.SLog.Companion.E
-import com.seatrend.android.slog.SLog.Companion.I
-import com.seatrend.android.slog.SLog.Companion.V
-import com.seatrend.android.slog.SLog.Companion.W
+import com.seatrend.android.slog.SLog.A
+import com.seatrend.android.slog.SLog.D
+import com.seatrend.android.slog.SLog.E
+import com.seatrend.android.slog.SLog.I
+import com.seatrend.android.slog.SLog.V
+import com.seatrend.android.slog.SLog.W
 
 /**
  * @ClassName BaseLog
@@ -23,12 +23,14 @@ object BaseLog {
         var length = msg.length
         var countOfSub = length / MAX_LENGTH
 
-        //
         if (countOfSub > 0) {
             for (i in msg.indices) {
                 var sub = msg.substring(index, index + MAX_LENGTH)
                 printSub(type, tag, sub)
             }
+            printSub(type, tag, msg.substring(index, length))
+        } else {
+            printSub(type, tag, msg)
         }
     }
 
