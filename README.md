@@ -1,5 +1,5 @@
 - 更新日期：2022-1-18
-- 基于日志打印开源框架KLog(Git地址：https://github.com/ZhaoKaiQiang/KLog)修改。
+- 基于日志打印开源框架KLog(Git地址：https://github.com/ZhaoKaiQiang/KLog) 修改。
 - 修改点：
   - 使用Kotlin编写
   - 去除冗余代码
